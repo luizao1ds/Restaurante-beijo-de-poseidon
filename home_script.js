@@ -1,19 +1,57 @@
-const slides = document.querySelectorAll(".slide");
+const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.querySelector('.dots');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
 
-let indice = 0;
+let currentIndex = 0;
+let interval;
 
-function trocarImagem() {
+// Criar os pontos (dots)
+slides.forEach((_, index) => {
+  const dot = document.createElement('span');
+  dot.classList.add('dot');
+  if (index === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => goToSlide(index));
+  dotsContainer.appendChild(dot);
+});
 
-    slides[indice].classList.remove("ativo");
+const dots = document.querySelectorAll('.dot');
 
-    indice++;
+function goToSlide(index) {
+  slides[currentIndex].classList.remove('active');
+  dots[currentIndex].classList.remove('active');
 
-    if (indice >= slides.length) {
-        indice = 0;
-    }
+  currentIndex = (index + slides.length) % slides.length;
 
-    slides[indice].classList.add("ativo");
+  slides[currentIndex].classList.add('active');
+  dots[currentIndex].classList.add('active');
 }
 
-// Troca a imagem a cada 4 segundos
-setInterval(trocarImagem, 4000);
+function nextSlide() {
+  goToSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+  goToSlide(currentIndex - 1);
+}
+
+// Controles manuais
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+// Autoplay
+function startAutoplay() {
+  interval = setInterval(nextSlide, 4000);
+}
+
+function stopAutoplay() {
+  clearInterval(interval);
+}
+
+// Pausar ao passar o mouse
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('mouseenter', stopAutoplay);
+carousel.addEventListener('mouseleave', startAutoplay);
+
+// Iniciar
+startAutoplay();

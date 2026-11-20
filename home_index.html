@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><!-- nome do restaurante -->| Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Restaurante Beijo de Poseidon | Home</title>
+    <link rel="stylesheet" href="home_style.css">
      <link rel="icon" type="image/png" href="">
 </head>
 <body>
@@ -19,21 +19,20 @@
         </ul>
     </nav>
 </header><!-- Fim do Cabeçalho -->
- <div class="carrossel">
 
-        <div class="slide ativo">
-            <img src="image/imagem1.jpg" alt="Imagem 1">
-        </div>
+<div class="carousel">
+  <div class="slides">
+    <img src="https://picsum.photos/id/1015/800/500" class="slide active" alt="Imagem 1">
+    <img src="https://picsum.photos/id/1016/800/500" class="slide" alt="Imagem 2">
+    <img src="https://picsum.photos/id/1018/800/500" class="slide" alt="Imagem 3">
+    <img src="https://picsum.photos/id/1020/800/500" class="slide" alt="Imagem 4">
+  </div>
 
-        <div class="slide">
-            <img src="image/imagem2.jpg" alt="Imagem 2">
-        </div>
+  <button class="btn prev">❮</button>
+  <button class="btn next">❯</button>
 
-        <div class="slide">
-            <img src="image/imagem3.jpg" alt="Imagem 3">
-        </div>
-
-    </div>
+  <div class="dots"></div>
+</div>
 
     
 <footer class="rodape"><!-- começo do rodapé -->
@@ -86,6 +85,6 @@
 
 <!-- fim do rodapé -->
 
-<script src="script.js"></script>
+<script src="home_script.js"></script>
 </body>
 </html>

@@ -32,7 +32,7 @@ body {
   
 }
 .cabecalho1 nav a:hover{
-    color: rgb(53, 156, 163);
+    color: rgb(0, 162, 111);
     transition: 0.3s;
 }
 
@@ -48,7 +48,7 @@ body {
     position: absolute;
     width: 0;
     height: 3px;
-    background: rgb(53, 156, 163);
+    background: rgb(0, 162, 111);
     left: 0;
     bottom: -5px;
     transition: 0.3s;
@@ -120,7 +120,7 @@ footer {
 }
 
 .coluna h3 {
-    color:rgb(53, 156, 163);
+    color:rgb(0, 162, 111);
     margin-bottom: 20px;
 }
 
@@ -135,7 +135,7 @@ footer {
     text-decoration: none;
 }
 .i i{
-    color: rgb(53, 156, 163);
+    color: rgb(0, 162, 111);
 }
 
 .i p{
@@ -174,7 +174,7 @@ footer {
 }
 
 .redes i:hover {
-    color: rgb(53, 156, 163)!important;
+    color: rgb(0, 162, 111)!important;
     transition: color 0.3s !important ;
     cursor: pointer;
 }

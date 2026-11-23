@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Restaurante Beijo de Poseidon | Login</title>
     <link rel="stylesheet" href="login_style.css">
 </head>
 <body >
@@ -11,16 +12,63 @@
 
   <h1>Login</h1>
     <label for="nome">Usuário</label>
-    <input type="text" id="Usuário" placeholder="moises" required>
+    <input class="borda" type="text" id="Usuário" placeholder="moises" required>
 
     <label for="telefone">Senha</label>
-    <input type="number" id="Senha" placeholder="123" required>
+    <input class="borda" type="text" id="Senha" placeholder="123" required>
 
     <button type="submit" class="btn" id="botao" href="index.html">Entrar</button>
 </main>
-    <footer class="direitos-autorais">
-    &copy;2026 Anotações | Todos os direitos reservados
-   </footer>
+   <footer class="rodape"><!-- começo do rodapé -->
+    <div class="rodape-container">
+
+        <div class="coluna">
+            <h3>Horários de funcionamento</h3>
+
+            <p>Seg a Sex: <strong>6h às 23h</strong></p>
+            <p>Sábados: <strong>7h às 00h</strong></p>
+
+            <br>
+
+            <p>Av. Paulista, 123</p>
+            <p>São Paulo - SP</p>
+
+            <br>
+
+           
+        </div>
+
+        <div class="coluna logo-centro">
+            <img src="imagem_hamburgueria/Logo_Nova_Lanchonete-removebg.png" alt="Logo Lanchonete Rei do Lanche ">
+        </div>
+
+        <div class="coluna">
+            <h3>Contato</h3>
+        <div class="i">
+            <p><i class="fa-brands fa-whatsapp"></i> (11) 1234-5678</p>
+            <p><i class="fa-solid fa-phone"></i> (11) 98765-4321</p>
+            <p><i class="fa-solid fa-at"></i> contato@restaurantebeijodeposeidon.com</p>
+        </div>
+            <br>
+
+            <h3>Siga o Restaurante Beijo de Poseidon </h3>
+
+            <div class="redes">
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-youtube"></i>  
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+  <div class="footer-bottom">
+    &copy;2026 Restaurante Beijo de Poseidon | Todos os direitos reservados
+  </div>
+
+<!-- fim do rodapé -->
+
    <script src="login_script.js"></script>
 </body>
 </html>
